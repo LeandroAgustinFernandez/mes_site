@@ -1,0 +1,275 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(15, 28, 62, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.scrolled {
+  background-color: var(--color-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: var(--header-height);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #ffffff;
+  text-decoration: none;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.brand:hover {
+  color: #ffffff;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.brandSub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9fb1d6;
+  margin-top: 0.15rem;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 0.25rem;
+  margin-inline: auto;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.55rem 0.7rem;
+  border-radius: 999px;
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.instagram:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  color: #ffffff;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.burger:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Menú móvil: overlay de pantalla completa (queda debajo del header para que el botón ✕ siga visible) */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--header-height) + 1rem) var(--container-pad) 2rem;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  transition:
+    opacity var(--transition-base),
+    visibility var(--transition-base);
+}
+
+.mobileOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mobileLink {
+  display: block;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 6vw, 1.75rem);
+  font-weight: 600;
+  padding: 0.72rem 0;
+  transition: color var(--transition-fast);
+}
+
+.mobileLink:hover {
+  color: var(--color-accent);
+}
+
+.mobileFooter {
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.mobileCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.9rem 1.5rem;
+  border-radius: 999px;
+  transition: background-color var(--transition-fast);
+}
+
+.mobileCta:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.mobileContact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.mobileLinkRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.98rem;
+}
+
+.mobileLinkRow:hover {
+  color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .brandSub {
+    display: none;
+  }
+
+  .brandName {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .instagram {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .instagram {
+    display: none;
+  }
+}

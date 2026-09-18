@@ -1,0 +1,11 @@
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

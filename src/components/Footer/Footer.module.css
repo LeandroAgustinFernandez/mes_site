@@ -1,0 +1,128 @@
+.footer {
+  background-color: var(--color-dark);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-block: clamp(3rem, 7vw, 4.5rem);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.3rem;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9fb1d6;
+  margin-top: 0.2rem;
+}
+
+.desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 40ch;
+  margin-bottom: 1.4rem;
+}
+
+.insta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.insta:hover {
+  color: var(--color-accent);
+}
+
+.colTitle {
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.navCol ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+}
+
+.contactLink:hover {
+  color: #ffffff;
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-block: 1.4rem;
+}
+
+.bottomInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.trad {
+  letter-spacing: 0.06em;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+  }
+}

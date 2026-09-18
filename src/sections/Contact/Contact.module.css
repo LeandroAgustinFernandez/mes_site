@@ -1,0 +1,114 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.panelTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.3rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.tile:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+}
+
+.tileIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-accent)
+  );
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.tileText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.tileLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.tileValue {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.locations ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+.locations li {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.3rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.locName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.04rem;
+  color: var(--color-primary);
+}
+
+.locAddr {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+}
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 0.3rem;
+}
+
+@media (min-width: 900px) {
+  .wrap {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

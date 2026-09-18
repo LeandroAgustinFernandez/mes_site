@@ -1,0 +1,45 @@
+.wrap {
+  margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
+}
+
+.center {
+  text-align: center;
+}
+
+.kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.9rem;
+}
+
+.title {
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--color-text-light);
+  max-width: 62ch;
+  margin-inline: 0;
+}
+
+.center .subtitle {
+  margin-inline: auto;
+}
+
+.light .kicker {
+  color: var(--color-accent);
+}
+
+.light .title {
+  color: #ffffff;
+}
+
+.light .subtitle {
+  color: rgba(255, 255, 255, 0.78);
+}
