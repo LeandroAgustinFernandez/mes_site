@@ -13,10 +13,10 @@ dist-ssr
 *.local
 
 # Material fuente (no se sube al repositorio)
-images/
-hero/
-Data.txt
-Prompt site.txt
+/images/
+/hero/
+/Data.txt
+/Prompt site.txt
 
 # Editor directories and files
 .vscode/*
