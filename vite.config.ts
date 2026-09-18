@@ -3,6 +3,6 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/mes_site/' : '/',
+  base: command === 'build' ? './' : '/',
   plugins: [react()],
 }))
