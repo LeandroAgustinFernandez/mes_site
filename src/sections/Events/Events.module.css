@@ -13,6 +13,17 @@
   color: var(--color-text-light);
 }
 
+.emptyTitle {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 .error {
   text-align: center;
   color: #a33a2b;

@@ -83,6 +83,13 @@ export async function deleteEvent(event: EventItem): Promise<void> {
 
 async function uploadEventImage(file: File | Blob): Promise<string> {
   const client = requireClient(supabase)
+  const {
+    data: { session },
+  } = await client.auth.getSession()
+  console.log(
+    '[events] subiendo imagen como:',
+    session?.user?.email ?? 'SIN SESIÓN (rol anon)',
+  )
   const ext = file instanceof File ? (file.name.split('.').pop() ?? 'webp') : 'webp'
   const path = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`
   const { error } = await client.storage.from(BUCKET).upload(path, file, {

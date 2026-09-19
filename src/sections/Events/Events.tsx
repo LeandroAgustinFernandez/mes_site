@@ -22,7 +22,8 @@ export function Events() {
         if (!mounted) return
         setItems(result)
       })
-      .catch(() => {
+      .catch((e) => {
+        console.error('[events] no se pudieron cargar los eventos:', e)
         if (!mounted) return
         setError(true)
       })
@@ -38,7 +39,6 @@ export function Events() {
     <section id="eventos" className="section section--alt">
       <div className="container">
         <SectionTitle kicker="Eventos" title={events.title} subtitle={events.subtitle} />
-
         {!supabaseConfigured ? (
           <p className={styles.notConfigured}>
             La sección de eventos estará disponible próximamente.
@@ -49,13 +49,14 @@ export function Events() {
           <p className={styles.error} role="alert">
             No se pudieron cargar los eventos. Intentá nuevamente más tarde.
           </p>
-        ) : items.length === 0 ? (
-          <div ref={ref} className={`${styles.empty} fade-in`}>
-            {events.empty}
+        ) : items.length == 0 ? (
+          <div className={styles.empty} role="status">
+            <h3 className={styles.emptyTitle}>{events.empty.title}</h3>
+            <p className={styles.emptyText}>{events.empty.text}</p>
           </div>
         ) : (
           <div ref={ref} className={`${styles.grid} fade-in`}>
-            {items.map((item) => (
+            {items.map((item) => (              
               <EventCard key={item.id} event={item} />
             ))}
           </div>

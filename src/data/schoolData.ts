@@ -181,7 +181,10 @@ export const events = {
   title: 'Eventos',
   subtitle:
     'Jornadas, exámenes y actividades que la escuela comparte con su comunidad.',
-  empty: 'Todavía no hay eventos publicados. Pronto compartiremos novedades.',
+  empty: {
+    title: 'No hay eventos publicados',
+    text: 'Pronto compartiremos nuevas fechas y actividades con la comunidad.',
+  },
 }
 
 export const navItems = [

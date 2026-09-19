@@ -45,7 +45,8 @@ export function EventForm() {
         setPublished(found.published)
         setExistingImage(found.image_url)
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error('[admin] no se pudo cargar el evento:', err)
         if (mounted) setSubmitError('No se pudo cargar el evento. Intentá nuevamente.')
       })
       .finally(() => {
@@ -116,13 +117,14 @@ export function EventForm() {
         await createEvent(draft)
       }
       navigate('/admin', { replace: true })
-    } catch {
-      setSubmitError(
-        editing
-          ? 'No se pudo guardar el evento. Intentá nuevamente.'
-          : 'No se pudo guardar el evento. Intentá nuevamente.',
-      )
-    } finally {
+} catch (err) {
+        console.error('[admin] no se pudo guardar el evento:', err)
+        setSubmitError(
+          editing
+            ? 'No se pudo guardar el evento. Intentá nuevamente.'
+            : 'No se pudo guardar el evento. Intentá nuevamente.',
+        )
+      } finally {
       setBusy(false)
     }
   }
