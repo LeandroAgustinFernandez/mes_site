@@ -12,11 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Variables de entorno (no se suben)
+.env
+.env.*
+!.env.example
+
 # Material fuente (no se sube al repositorio)
 /images/
 /hero/
 /Data.txt
 /Prompt site.txt
+/Adicional prompt.txt
 
 # Editor directories and files
 .vscode/*

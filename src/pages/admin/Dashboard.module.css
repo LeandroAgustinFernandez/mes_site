@@ -1,0 +1,224 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.1rem;
+  transition: background-color var(--transition-fast);
+}
+
+.primary:hover {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--color-text-light);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.9rem;
+  text-decoration: none;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.secondaryBtn:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.error {
+  color: #a33a2b;
+  background-color: #fdecea;
+  border: 1px solid #f3c1ba;
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.state {
+  color: var(--color-text-light);
+  background-color: var(--color-bg);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.4rem 1.5rem;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+}
+
+.rowInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.rowTitle {
+  font-weight: 600;
+  color: var(--color-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowMeta {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.published {
+  color: #1a7f46;
+  font-weight: 600;
+}
+
+.draft {
+  color: #9a6b16;
+  font-weight: 600;
+}
+
+.rowActions {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.action {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-light);
+  background: none;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.action:hover {
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.danger:hover {
+  color: #a33a2b;
+  border-color: #c65a48;
+  background-color: #fdecea;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background-color: rgba(15, 28, 62, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.8rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.modalTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.modalText {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+}
+
+.ghostBtn {
+  font: inherit;
+  font-weight: 600;
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.1rem;
+  color: var(--color-text-light);
+}
+
+.ghostBtn:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-light);
+}
+
+.dangerBtn {
+  font: inherit;
+  font-weight: 600;
+  background-color: #a33a2b;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.1rem;
+}
+
+.dangerBtn:hover {
+  background-color: #8a2f23;
+}
+
+.ghostBtn:disabled,
+.dangerBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -112,6 +112,14 @@ section[id] {
   border: 0;
 }
 
+.route-fallback {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-light);
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(26px);

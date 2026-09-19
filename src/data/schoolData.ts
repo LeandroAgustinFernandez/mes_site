@@ -177,6 +177,13 @@ export const gallery = {
   instagramCta: 'Seguinos en Instagram para ver más contenido.',
 }
 
+export const events = {
+  title: 'Eventos',
+  subtitle:
+    'Jornadas, exámenes y actividades que la escuela comparte con su comunidad.',
+  empty: 'Todavía no hay eventos publicados. Pronto compartiremos novedades.',
+}
+
 export const navItems = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'escuela', label: 'La Escuela' },
@@ -184,6 +191,7 @@ export const navItems = [
   { id: 'entrenamiento', label: 'Entrenamiento' },
   { id: 'maestros', label: 'Maestros' },
   { id: 'galeria', label: 'Galería' },
+  { id: 'eventos', label: 'Eventos' },
   { id: 'ubicaciones', label: 'Dónde entrenamos' },
   { id: 'contacto', label: 'Contacto' },
 ]

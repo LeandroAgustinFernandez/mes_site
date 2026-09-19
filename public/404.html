@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movimiento es Vida · Shaolin Kung Fu</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0f1c3e;
+        color: #ffffff;
+      }
+      p {
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+      }
+    </style>
+    <script>
+      // Fallback SPA para GitHub Pages: redirige a la raíz y guarda la ruta
+      ;(function () {
+        var redirect = location.pathname + location.search + location.hash
+        var base = redirect.split('/').indexOf('mes_site') >= 0 ? '/mes_site' : ''
+        var target = redirect.slice(base.length) || '/'
+        sessionStorage.setItem('_spa_redirect', target)
+        location.replace(base + '/')
+      })()
+    </script>
+  </head>
+  <body>
+    <p>Redirigiendo…</p>
+  </body>
+</html>

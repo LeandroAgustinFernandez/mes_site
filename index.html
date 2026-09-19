@@ -36,6 +36,16 @@
     />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
+    <script>
+      // GitHub Pages: restaura la ruta profunda guardada por 404.html
+      ;(function () {
+        var redirect = sessionStorage.getItem('_spa_redirect')
+        if (redirect) {
+          sessionStorage.removeItem('_spa_redirect')
+          history.replaceState(null, '', redirect)
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
