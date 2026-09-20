@@ -7,7 +7,7 @@ import styles from './Locations.module.css'
 
 export function Locations() {
   return (
-    <section id="ubicaciones" className="section section--alt">
+    <section id="ubicaciones" className="section">
       <div className="container">
         <SectionTitle
           kicker="Dónde entrenamos"

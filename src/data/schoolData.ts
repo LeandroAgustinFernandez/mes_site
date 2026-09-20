@@ -190,12 +190,12 @@ export const events = {
 export const navItems = [
   { id: 'inicio', label: 'Inicio' },
   { id: 'escuela', label: 'La Escuela' },
-  { id: 'kungfu', label: 'Shaolin Kung Fu' },
+  { id: 'kungfu', label: 'Kung Fu' },
   { id: 'entrenamiento', label: 'Entrenamiento' },
   { id: 'maestros', label: 'Maestros' },
   { id: 'galeria', label: 'Galería' },
   { id: 'eventos', label: 'Eventos' },
-  { id: 'ubicaciones', label: 'Dónde entrenamos' },
+  { id: 'ubicaciones', label: 'Ubicaciones' },
   { id: 'contacto', label: 'Contacto' },
 ]
 

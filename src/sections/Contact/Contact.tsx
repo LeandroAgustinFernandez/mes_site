@@ -5,7 +5,7 @@ import styles from './Contact.module.css'
 
 export function Contact() {
   return (
-    <section id="contacto" className="section">
+    <section id="contacto" className="section section--alt">
       <div className="container">
         <SectionTitle
           kicker="Contacto"
