@@ -45,7 +45,7 @@ export function GallerySection() {
           subtitle={gallery.subtitle}
         />
 
-        <div ref={ref} className={`${styles.grid} fade-in`}>
+        <div ref={ref} className={`${styles.grid}`}>
           {galleryItems.map((item, index) => (
             <button
               key={item.src}
