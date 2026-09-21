@@ -1,6 +1,7 @@
 import { teachers, school } from '../../data/schoolData'
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle'
 import { Button } from '../../components/Button/Button'
+import { ImageCredit } from '../../components/ImageCredit/ImageCredit'
 import { useReveal } from '../../hooks/useReveal'
 import maestrosImg from '../../assets/maestros.webp'
 import styles from './Teachers.module.css'
@@ -28,6 +29,7 @@ export function Teachers() {
             <figcaption className={styles.caption}>
               {teachers.map((t) => `${t.name} (${t.role})`).join(' · ')}
             </figcaption>
+            <ImageCredit file="maestros.webp" />
           </figure>
 
           <div className={styles.profiles}>

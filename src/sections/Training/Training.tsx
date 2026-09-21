@@ -1,7 +1,16 @@
 import { disciplines } from '../../data/schoolData'
+import { imageCredits } from '../../data/imageCredits'
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle'
+import { ImageCredit } from '../../components/ImageCredit/ImageCredit'
 import { useReveal } from '../../hooks/useReveal'
+import trainingImg from '../../assets/training.webp'
+import heroImg from '../../assets/hero.webp'
 import styles from './Training.module.css'
+
+const creditByImage: Record<string, keyof typeof imageCredits> = {
+  [trainingImg]: 'training.webp',
+  [heroImg]: 'hero.webp',
+}
 
 export function Training() {
   return (
@@ -36,6 +45,7 @@ function TrainingCard({
     <article ref={ref} className={`${styles.card} fade-in`}>
       <div className={styles.imgWrap}>
         <img src={image} alt={`Clase de ${name} en Movimiento es Vida`} className={styles.img} loading="lazy" />
+        {creditByImage[image] && <ImageCredit file={creditByImage[image]} />}
       </div>
       <div className={styles.body}>
         <span className={styles.tagline}>{tagline}</span>

@@ -60,6 +60,9 @@ export function GallerySection() {
                 loading="lazy"
                 className={styles.img}
               />
+              {item.credit && (
+                <span className={styles.credit}>{item.credit}</span>
+              )}
             </button>
           ))}
         </div>
@@ -121,6 +124,11 @@ export function GallerySection() {
             <p className={styles.counter}>
               {active + 1} / {galleryItems.length}
             </p>
+            {galleryItems[active].credit && (
+              <p className={styles.lightboxCredit}>
+                Foto · {galleryItems[active].credit}
+              </p>
+            )}
           </div>
         </div>
       )}

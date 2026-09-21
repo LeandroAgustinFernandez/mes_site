@@ -1,6 +1,7 @@
 import { aboutText, values, school } from '../../data/schoolData'
 import { SectionTitle } from '../../components/SectionTitle/SectionTitle'
 import { InfoCard } from '../../components/InfoCard/InfoCard'
+import { ImageCredit } from '../../components/ImageCredit/ImageCredit'
 import { Icon } from '../../components/Icon'
 import { useReveal } from '../../hooks/useReveal'
 import aboutImg from '../../assets/about.webp'
@@ -46,6 +47,7 @@ export function About() {
             <figcaption className={styles.caption}>
               {school.name} · {school.tagline}
             </figcaption>
+            <ImageCredit file="about.webp" />
           </figure>
         </div>
 

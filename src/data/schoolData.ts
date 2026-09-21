@@ -2,9 +2,15 @@
 import heroImg from '../assets/hero.webp'
 import maestrosImg from '../assets/maestros.webp'
 
+
+export interface Format {
+  type: string
+  hours: string
+}
+
 export interface Schedule {
   day: string
-  hours: string
+  format: Format[]
 }
 
 export interface Location {
@@ -50,7 +56,7 @@ export const school = {
 export const aboutText = [
   {
     title: 'Una escuela que acerca las artes marciales a la comunidad',
-    body: 'La escuela "Movimiento es Vida" desarrolla sus actividades en Lomas de Zamora y Temperley y busca acercar las artes marciales a vecinos de distintas edades. Tras su participación en el Torneo Mercosur, donde sus nueve atletas obtuvieron 13 medallas, el proyecto continúa con clases gratuitas para la comunidad.',
+    body: 'La escuela "Movimiento es Vida" desarrolla sus actividades en Lomas de Zamora, Temperley y Remedios de Escalada y busca acercar las artes marciales a vecinos de distintas edades. El proyecto cuenta ademas con clases gratuitas para la comunidad.',
   },
   {
     title: 'Más que técnica, una herramienta de crecimiento',
@@ -113,7 +119,7 @@ export const teachers: Teacher[] = [
     name: 'Brian Miranda',
     role: 'Shifu · Director',
     description:
-      'Inició su recorrido marcial a los 16 años y cuenta con experiencia en competencias nacionales e internacionales. Dirige el proyecto y dicta clases en las distintas sedes, trabajando principalmente con niños.',
+      'Desde los 16 años forma estudiantes y cuenta con experiencia en competencias nacionales e internacionales. Dirige el proyecto y dicta clases en las distintas sedes, trabajando principalmente con niños.',
     image: maestrosImg,
   },
   {
@@ -133,10 +139,10 @@ export const locations: Location[] = [
     address: 'Iriarte 1337',
     locality: 'Temperley · Buenos Aires',
     schedule: [
-      { day: 'Martes', hours: '18:00 a 19:30' },
-      { day: 'Miércoles', hours: '10:00 a 11:30' },
-      { day: 'Jueves', hours: '18:00 a 19:30' },
-      { day: 'Viernes', hours: '10:00 a 11:30' },
+      { day: 'Martes', format: [{type: 'Todos los niveles', hours: '18:00 a 19:30'}] },
+      { day: 'Miércoles', format: [{type: 'Todos los niveles', hours: '10:00 a 11:30'}] },
+      { day: 'Jueves', format: [{type: 'Todos los niveles', hours: '18:00 a 19:30'}] },
+      { day: 'Viernes', format: [{type: 'Todos los niveles', hours: '10:00 a 11:30'}] },
     ],
     mapUrl:
       'https://www.google.com/maps/place/Club+Ituzaing%C3%B3/data=!4m2!3m1!1s0x0:0xcb5daf7589f1f0d6?sa=X&ved=1t:2428&ictx=111',
@@ -148,9 +154,9 @@ export const locations: Location[] = [
     address: 'Salguero 63',
     locality: 'Lomas de Zamora · Buenos Aires',
     schedule: [
-      { day: 'Martes', hours: '18:00 a 20:00' },
-      { day: 'Viernes', hours: '18:00 a 20:00' },
-      { day: 'Sábado', hours: '10:00 a 11:30' },
+      { day: 'Martes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 20:00'}] },
+      { day: 'Viernes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 20:00'}] },
+      { day: 'Sábado', format: [{type: "Todos los niveles", hours: '10:00 a 11:30'}] },
     ],
     mapUrl:
       'https://www.google.com/maps/place/club+gimnasia+y+esgrima+de+lomas+de+zamora/data=!4m2!3m1!1s0x95bcd2c10fba0389:0xdaac6981e3c990bd?sa=X&ved=1t:242&ictx=111',
@@ -162,8 +168,8 @@ export const locations: Location[] = [
     address: 'Almirante Mariano Cordero 675',
     locality: 'Remedios de Escalada · Lanús',
     schedule: [
-      { day: 'Lunes', hours: '18:00 a 19:00' },
-      { day: 'Miércoles', hours: '18:00 a 19:00' },
+      { day: 'Lunes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 21:00'}] },
+      { day: 'Miércoles', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 21:00'}] },
     ],
     mapUrl:
       'https://www.google.com/maps/place/Club+La+Amistad/data=!4m2!3m1!1s0x0:0x7d893e7814bb73a8?sa=X&ved=1t:2428&ictx=111',

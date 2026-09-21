@@ -94,9 +94,9 @@
 
 .slot {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 0.4rem;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-block: 0.6rem;
   font-size: 0.95rem;
   border-bottom: 1px dashed var(--color-border);
 }
@@ -106,12 +106,48 @@
 }
 
 .slotDay {
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.slotDay::before {
+  content: '';
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.formats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.format {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.15rem 0.9rem;
+}
+
+.formatType {
+  font-weight: 500;
   color: var(--color-text);
 }
 
 .slotHours {
   color: var(--color-text-light);
+  text-align: right;
+  white-space: nowrap;
 }
 
 .cardFooter {

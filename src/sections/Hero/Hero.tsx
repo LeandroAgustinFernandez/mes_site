@@ -1,5 +1,6 @@
 import { school, heroPhrase, heroDescription } from '../../data/schoolData'
 import { Button } from '../../components/Button/Button'
+import { ImageCredit } from '../../components/ImageCredit/ImageCredit'
 import heroImg from '../../assets/hero.webp'
 import styles from './Hero.module.css'
 
@@ -7,6 +8,7 @@ export function Hero() {
   return (
     <section id="inicio" className={styles.hero}>
       <img src={heroImg} alt="" className={styles.bg} />
+      <ImageCredit file="hero.webp" />
       <div className={styles.overlay} />
       <div className={`container ${styles.content}`}>
         <span className={styles.eyebrow}>{school.tagline}</span>

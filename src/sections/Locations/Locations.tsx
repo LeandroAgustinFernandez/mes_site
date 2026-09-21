@@ -63,7 +63,14 @@ function LocationCard({
           {schedule.map((slot) => (
             <li key={slot.day} className={styles.slot}>
               <span className={styles.slotDay}>{slot.day}</span>
-              <span className={styles.slotHours}>{slot.hours}</span>
+              <div className={styles.formats}>
+                {slot.format.map((format) => (
+                  <div key={format.type} className={styles.format}>
+                    <span className={styles.formatType}>{format.type}</span>
+                    <span className={styles.slotHours}>{format.hours}</span>
+                  </div>
+                ))}
+              </div>
             </li>
           ))}
         </ul>

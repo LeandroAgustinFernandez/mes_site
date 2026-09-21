@@ -51,6 +51,30 @@
   border-radius: var(--radius-sm);
 }
 
+.credit {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 1;
+  max-width: calc(100% - 1.2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: rgba(15, 28, 62, 0.65);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.tile:hover .credit,
+.tile:focus-visible .credit {
+  opacity: 1;
+}
+
 .cta {
   display: flex;
   flex-direction: column;
@@ -144,6 +168,22 @@
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.lightboxCredit {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  max-width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: rgba(15, 28, 62, 0.55);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
   margin: 0;
 }
 
