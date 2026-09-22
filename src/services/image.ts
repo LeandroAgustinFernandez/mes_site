@@ -1,7 +1,9 @@
 export const ALLOWED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp']
 export const MAX_INPUT_BYTES = 8 * 1024 * 1024
-export const MAX_DIMENSION = 1200
-const WEBP_QUALITY = 0.8
+export const MAX_DIMENSION = 1000
+export const MAX_OUTPUT_BYTES = 600 * 1024
+const MIN_DIMENSION = 400
+const WEBP_QUALITY = 0.75
 
 export interface ImageValidation {
   ok: boolean
@@ -45,20 +47,28 @@ function loadImage(src: string): Promise<HTMLImageElement> {
 export async function optimizeImage(file: File): Promise<Blob> {
   const dataUrl = await fileToDataUrl(file)
   const img = await loadImage(dataUrl)
-  const scale = Math.min(1, MAX_DIMENSION / Math.max(img.width, img.height))
-  const width = Math.max(1, Math.round(img.width * scale))
-  const height = Math.max(1, Math.round(img.height * scale))
 
-  const canvas = document.createElement('canvas')
-  canvas.width = width
-  canvas.height = height
-  const ctx = canvas.getContext('2d')
-  if (!ctx) throw new Error('No se pudo procesar la imagen.')
-  ctx.drawImage(img, 0, 0, width, height)
+  let target = MAX_DIMENSION
+  let blob: Blob | null = null
+  while (!blob || blob.size > MAX_OUTPUT_BYTES) {
+    const scale = Math.min(1, target / Math.max(img.width, img.height))
+    const width = Math.max(1, Math.round(img.width * scale))
+    const height = Math.max(1, Math.round(img.height * scale))
 
-  const blob: Blob | null = await new Promise((resolve) => {
-    canvas.toBlob(resolve, 'image/webp', WEBP_QUALITY)
-  })
+    const canvas = document.createElement('canvas')
+    canvas.width = width
+    canvas.height = height
+    const ctx = canvas.getContext('2d')
+    if (!ctx) throw new Error('No se pudo procesar la imagen.')
+    ctx.drawImage(img, 0, 0, width, height)
+
+    blob = await new Promise((resolve) => {
+      canvas.toBlob(resolve, 'image/webp', WEBP_QUALITY)
+    })
+
+    if (target <= MIN_DIMENSION) break
+    target = Math.round(target * 0.9)
+  }
   if (!blob) throw new Error('No se pudo procesar la imagen.')
   return blob
 }
