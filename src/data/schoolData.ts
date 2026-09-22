@@ -134,7 +134,7 @@ export const teachers: Teacher[] = [
 export const locations: Location[] = [
   {
     id: 'ituzaingo',
-    name: 'Club Social y Deportivo Ituzaingó',
+    name: 'Club Social y Deportivo Ituzaingo',
     club: 'El Itu',
     address: 'Iriarte 1337',
     locality: 'Temperley · Buenos Aires',

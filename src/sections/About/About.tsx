@@ -60,7 +60,7 @@ export function About() {
           <InfoCard
             icon={<Icon name="pin" size={26} />}
             title="Tres sedes"
-            text="Entrenamos en el Club Gimnasia y Esgrima de Lomas de Zamora, el Club Ituzaingó de Temperley y el Club La Amistad de Remedios de Escalada."
+            text="Entrenamos en el Club Gimnasia y Esgrima de Lomas de Zamora, el Club Ituzaingo de Temperley y el Club La Amistad de Remedios de Escalada."
           />
           <InfoCard
             icon={<Icon name="phone" size={26} />}
