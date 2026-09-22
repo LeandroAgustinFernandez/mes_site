@@ -1,5 +1,5 @@
-﻿import trainingImg from '../assets/training.webp'
-import heroImg from '../assets/hero.webp'
+﻿import shaolinImg from '../assets/shaolin.webp'
+import sandaImg from '../assets/sanda.webp'
 import maestrosImg from '../assets/maestros.webp'
 
 
@@ -101,7 +101,7 @@ export const disciplines: Discipline[] = [
     tagline: 'La disciplina tradicional',
     description:
       'El arte raíz del templo. Formas, posiciones, fuerza y técnica en un camino progresivo que acompaña a cada alumno según su ritmo y condición.',
-    image: trainingImg,
+    image: shaolinImg,
     audience: 'Niños, jóvenes y adultos, sin importar la condición física inicial.',
   },
   {
@@ -109,7 +109,7 @@ export const disciplines: Discipline[] = [
     tagline: 'Combate deportivo',
     description:
       'La modalidad de combate del Kung Fu moderno: golpes, patadas y proyecciones. Entrenamiento de aplicación real con seguridad y supervisión constante.',
-    image: heroImg,
+    image: sandaImg,
     audience: 'Requiere un nivel previo de Shaolin Kung Fu y se entrena bajo supervisión.',
   },
 ]

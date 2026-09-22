@@ -57,6 +57,18 @@ const jobs = [
     max: 1200,
     quality: 80,
   },
+  {
+    input: join(assetsDir, 'shaolin.jpeg'),
+    output: join(assetsDir, 'shaolin.webp'),
+    max: 1080,
+    quality: 78,
+  },
+  {
+    input: join(assetsDir, 'sanda.jpeg'),
+    output: join(assetsDir, 'sanda.webp'),
+    max: 1080,
+    quality: 78,
+  },
 ]
 
 for (const job of jobs) {
