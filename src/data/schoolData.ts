@@ -156,10 +156,9 @@ export const locations: Location[] = [
     schedule: [
       { day: 'Martes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 20:00'}] },
       { day: 'Viernes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 20:00'}] },
-      { day: 'Sábado', format: [{type: "Todos los niveles", hours: '10:00 a 11:30'}] },
     ],
     mapUrl:
-      'https://www.google.com/maps/place/club+gimnasia+y+esgrima+de+lomas+de+zamora/data=!4m2!3m1!1s0x95bcd2c10fba0389:0xdaac6981e3c990bd?sa=X&ved=1t:242&ictx=111',
+    'https://www.google.com/maps/place/club+gimnasia+y+esgrima+de+lomas+de+zamora/data=!4m2!3m1!1s0x95bcd2c10fba0389:0xdaac6981e3c990bd?sa=X&ved=1t:242&ictx=111',
   },
   {
     id: 'amistad',
@@ -170,6 +169,7 @@ export const locations: Location[] = [
     schedule: [
       { day: 'Lunes', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 21:00'}] },
       { day: 'Miércoles', format: [{type: "Infantiles", hours: '18:00 a 19:00'}, { type: "Adultos", hours: '19:00 a 21:00'}] },
+      { day: 'Sábado', format: [{type: "Todos los niveles", hours: '10:00 a 12:00'}] },
     ],
     mapUrl:
       'https://www.google.com/maps/place/Club+La+Amistad/data=!4m2!3m1!1s0x0:0x7d893e7814bb73a8?sa=X&ved=1t:2428&ictx=111',
